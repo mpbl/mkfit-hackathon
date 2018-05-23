@@ -4,7 +4,8 @@
 int main() {
 
   {
-    size_t testN = 10000;
+    //size_t testN = 1000000;
+    size_t testN = 7168;
     printf("Run raw_run_naive_mul\n");
     raw_run_naive_mul(testN);
   }

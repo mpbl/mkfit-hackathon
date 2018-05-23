@@ -4,6 +4,6 @@ all: $(objects)
 	nvcc -o multorture multorture.cc $(objects)
 
 %.o: %.cu
-	nvcc -I ${CUB_ROOT}/include -c $< -o $@  
+	nvcc -std=c++11 -I ${CUBROOT} -c $< -o $@  --ptxas-options=-v -arch=sm_60
 clean:
 	rm -f *.o multorture
